@@ -19,12 +19,13 @@ code {
 }
 
 .App {
-  position: relative;
+  
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   margin: auto;
 }
 .nonMap{
+  float: right;
   width: 30vw;
   padding-left: 2rem;
 }
@@ -36,21 +37,26 @@ code {
 }
 
 .places{
+  display: flex;
+  flex-direction: row-reverse;
+  padding-left: 2rem;
   color: #00093a;
-  margin-top: 2vh;
+  margin: 2rem;
   border-radius: 5px;
   background: linear-gradient(225deg, #ffffff, #dddddd);
   box-shadow:  -9px 9px 18px #a4a4a4,
                9px -9px 18px #ffffff;
-  padding: 1rem;
-  line-height: 2.5vh;
 }
-
+.coord{
+  margin-right: 3rem;
+}
 .inputForm{
+  max-width: 100%;
   line-height: 3vh;
   font-size: 1.5rem;
-  padding-left: 1rem;
-  margin-left: 2rem;
+  padding-left: 10rem;
+  padding-right: 15%;
+  /* margin-left: 2rem; */
   margin-bottom: 2rem;
 }
 .btn{
