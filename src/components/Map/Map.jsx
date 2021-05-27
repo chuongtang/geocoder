@@ -12,10 +12,12 @@ const LocationPin = ({ text }) => (
   </div>
 );
 
+// const ApiKey = process.env.GoogleAPI;
 
 
 // set Google Maps Geocoding API 
-Geocode.setApiKey("AIzaSyCiQ-ovaWviz8o2LjSus93PeUfFyFdKyY0"); //  ⟽ Chuong's API key
+// Geocode.setApiKey(ApiKey); //  ⟽ Chuong's API key
+Geocode.setApiKey('AIzaSyDwG4Tj1ziODB2N2--aZhhjn7IyIpNR0-k'); //  ⟽ Chuong's API key
 
 // set response language. Defaults to english.
 Geocode.setLanguage("en");
@@ -57,6 +59,7 @@ const Map = ({ location, zoomLevel }) => {
         <div className="google-map">
           <GoogleMapReact
             bootstrapURLKeys={{ key: 'AIzaSyCiQ-ovaWviz8o2LjSus93PeUfFyFdKyY0' }} //Chuong's API key
+            // bootstrapURLKeys={ {key: process.env.GoogleAPI}} //Chuong's API key
             defaultCenter={location}
             defaultZoom={zoomLevel}
           >

@@ -20,6 +20,12 @@ code {
 
 .App {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+.nonMap{
+  width: 30vw;
 }
 
 :root {

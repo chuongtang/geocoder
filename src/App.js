@@ -1,25 +1,26 @@
 import React from 'react'
 import Map from './components/Map/Map'
 import IntroSection from './components/intro/Intro'
-import ContactSection from './components/contact-section/ContactSection'
+// import ContactSection from './components/contact-section/ContactSection'
+import PlaceAutoComp from './components/PlaceAutoComp.jsx'
 
 
 import './App.css'
 
 
-
-
 const location = {
   address: 'Calgary, Ab, Canada',
-  lat: 37.42216,
-  lng: -122.08427,
-} // Dummy google location for testing
+  lat: 51.049999,
+  lng: -114.066666,
+} // Hard code YYC
 
 function App() {
   return (
     <div className="App">
-      <IntroSection />
-      <ContactSection />
+      <div className='nonMap'>
+        <IntroSection />
+        <PlaceAutoComp />
+      </div>
       <Map location={location} zoomLevel={15} /> {/* include it here */}
     </div>
   )

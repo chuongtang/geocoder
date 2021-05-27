@@ -1,5 +1,5 @@
 {
-  "name": "Re-Jijiji",
+  "name": "rejijiji",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,9 +7,12 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "google-map-react": "^1.1.7",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "leaflet": "^1.7.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-geocode": "^0.2.3",
+    "react-leaflet": "^3.2.0",
+    "react-places-autocomplete": "^7.3.0",
     "react-scripts": "3.4.1"
   },
   "scripts": {

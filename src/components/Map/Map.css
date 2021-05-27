@@ -8,18 +8,19 @@
 
 .google-map {
   width: 100%;
-  height: 30vh;
+  height: auto;
+  margin-left: 2rem;
 }
 
 .pin {
   display: flex;
   align-items: center;
-  width: 10px;
+  width: 1vw;
   color: var(--main-blue);
 }
 
 .pin-icon {
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 .pin-text {
