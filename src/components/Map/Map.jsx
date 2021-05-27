@@ -1,10 +1,5 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
-
-
-
-
-
 import './Map.css';
 
 const LocationPin = ({ text }) => {
@@ -18,7 +13,7 @@ const LocationPin = ({ text }) => {
 };
 
 const Map = ({ location, zoomLevel }) => {
-
+console.log(location.lat);
   return (
     <>
       <div className="map">

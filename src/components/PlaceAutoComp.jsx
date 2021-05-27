@@ -1,10 +1,11 @@
+/* eslint-disable jsx-a11y/accessible-emoji */
 import React, { useState } from 'react';
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng
 } from "react-places-autocomplete";
 import { Button, Form } from 'react-bootstrap';
-import Markers from './Map/Markers'
+
 
 // Styling in App.css
 
@@ -20,6 +21,7 @@ const PlacesAutoComp = () => {
     const latLng = await getLatLng(results[0]);
     setAddress(value);
     setCoordinates(latLng);
+    
   };
   const [category, setCategory] = useState("");
   // const [comment, setComment] = useState('');
@@ -69,17 +71,17 @@ const PlacesAutoComp = () => {
                   onChange={(e) => setCategory(e.target.value)}
                 >
                   <option value=''>Select...</option>
-                  <option value='plastics'>Plastics ♷</option>
-                  <option value='paper'>Paper ♽</option>
-                  <option value='clothes'>Clothes</option>
-                  <option value='electronics'>electronics <Markers ariaLabel="clothes" symbol="📺" /></option>
-                  <option value='furniture'>furniture🛏</option>
-                  {/* <option value='furniture'>furniture <Markers ariaLabel="clothes" symbol="🛏" /></option> */}
-                  <option value='metal'>metal <Markers ariaLabel="clothes" symbol="👕" /></option>
-                  <option value='recyclables'>recyclables <Markers ariaLabel="clothes" symbol="👕" /></option>
-                  <option value='glass'>glass <Markers ariaLabel="clothes" symbol="👕" /></option>
-                  <option value='textiles'>textiles <Markers ariaLabel="clothes" symbol="👕" /></option>
-                  <option value='others'>others <Markers ariaLabel="clothes" symbol="👕" /></option>
+                  <option value='plastics'>Plastics 🧩</option>
+                  <option value='paper'>Paper 📰</option>
+                  <option value='clothes'>Clothes 👚</option>
+                  <option value='electronics'>electronics 📺 </option>
+                  <option value='furniture'>furniture 🛏️</option>
+
+                  <option value='metal'>metal 🍴</option>
+                  <option value='recyclables'>recyclables 🧃</option>
+                  <option value='glass'>glass 🍸</option>
+                  <option value='textiles'>textiles 🎏</option>
+                  <option value='others'>others 🥡</option>
 
 
                 </Form.Control>
