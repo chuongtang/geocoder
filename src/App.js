@@ -8,20 +8,21 @@ import PlaceAutoComp from './components/PlaceAutoComp.jsx'
 import './App.css'
 
 
-const location = {
-  address: 'Calgary, Ab, Canada',
+const Calgary = {
+  address: 'Calgary, AB',
   lat: 51.049999,
   lng: -114.066666,
 } // Hard code YYC
 
 function App() {
+ 
   return (
     <div className="App">
       <div className='nonMap'>
         <IntroSection />
         <PlaceAutoComp />
       </div>
-      <Map location={location} zoomLevel={17} />
+      <Map location={Calgary} zoomLevel={16} />
     </div>
   )
 }
