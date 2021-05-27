@@ -26,6 +26,7 @@ code {
 }
 .nonMap{
   width: 30vw;
+  padding-left: 2rem;
 }
 
 :root {

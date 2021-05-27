@@ -2,15 +2,20 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import Geocode from "react-geocode";
 import { Icon } from '@iconify/react';
-import locationIcon from '@iconify/icons-mdi/map-marker';
+
+
+
 import './Map.css';
 
-const LocationPin = ({ text }) => (
-  <div className="pin">
-    <Icon icon={locationIcon} className="pin-icon" />
-    <p className="pin-text">{text}</p>
-  </div>
-);
+const LocationPin = ({ text }) => {
+  return (
+
+    <div className="pin">
+      ⤋
+      <p className="pin-text">{text}</p>
+    </div>
+  )
+};
 
 // const ApiKey = process.env.GoogleAPI;
 
