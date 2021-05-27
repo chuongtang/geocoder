@@ -38,12 +38,12 @@ const PlacesAutoComp = () => {
         onSelect={handleSelect}
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
-          <div>
+          <div className='inputForm'>
             <p>Latitude: {coordinates.lat}</p>
             <p>Longitude: {coordinates.lng}</p>
-
-            <input {...getInputProps({ placeholder: "Type address" })} />
-
+              Address
+            <input {...getInputProps({ placeholder: "Type address" })} className='inputForm' />
+            {/* <p style={{ color: 'transparent' }}> spacer </p> */}
             <div>
               {loading ? <div>...loading</div> : null}
 
@@ -61,10 +61,11 @@ const PlacesAutoComp = () => {
             </div>
             <Form onSubmit={submitHandler}>
               <Form.Group controlId='category'>
-                <Form.Label>category</Form.Label>
+                <Form.Label>Category</Form.Label>
                 <Form.Control
                   as='select'
                   value={category}
+                  className='inputForm'
                   onChange={(e) => setCategory(e.target.value)}
                 >
                   <option value=''>Select...</option>
@@ -72,7 +73,8 @@ const PlacesAutoComp = () => {
                   <option value='paper'>Paper ♽</option>
                   <option value='clothes'>Clothes</option>
                   <option value='electronics'>electronics <Markers ariaLabel="clothes" symbol="📺" /></option>
-                  <option value='furniture'>furniture <Markers ariaLabel="clothes" symbol="🛏" /></option>
+                  <option value='furniture'>furniture🛏</option>
+                  {/* <option value='furniture'>furniture <Markers ariaLabel="clothes" symbol="🛏" /></option> */}
                   <option value='metal'>metal <Markers ariaLabel="clothes" symbol="👕" /></option>
                   <option value='recyclables'>recyclables <Markers ariaLabel="clothes" symbol="👕" /></option>
                   <option value='glass'>glass <Markers ariaLabel="clothes" symbol="👕" /></option>
@@ -83,8 +85,8 @@ const PlacesAutoComp = () => {
                 </Form.Control>
               </Form.Group>
 
-              <Button type='submit' variant='primary'>
-                Submit
+              <Button type='submit' className='btn'>
+                Set Marker
                       </Button>
             </Form>
           </div>
