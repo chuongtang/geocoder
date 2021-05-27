@@ -34,3 +34,14 @@ code {
   --main-green: #2e9385;
   --white: #ffffff;
 }
+
+.places{
+  color: #00093a;
+  margin-top: 2vh;
+  border-radius: 5px;
+  background: linear-gradient(225deg, #ffffff, #dddddd);
+  box-shadow:  -9px 9px 18px #a4a4a4,
+               9px -9px 18px #ffffff;
+  padding: 1rem;
+  line-height: 2.5vh;
+}

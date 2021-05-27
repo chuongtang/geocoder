@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PlacesAutocomplete, {
   geocodeByAddress,
   getLatLng
 } from "react-places-autocomplete";
+
+// Styling in App.css
 
 const PlacesAutoComp = () => {
   const [address, setAddress] = useState("");
@@ -18,8 +20,8 @@ const PlacesAutoComp = () => {
     setCoordinates(latLng);
   };
 
-  return ( 
-    <div>
+  return (
+    <div className="places">
       <PlacesAutocomplete
         value={address}
         onChange={setAddress}
@@ -52,7 +54,7 @@ const PlacesAutoComp = () => {
       </PlacesAutocomplete>
     </div>
 
-   );
+  );
 }
- 
+
 export default PlacesAutoComp;

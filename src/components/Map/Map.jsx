@@ -1,7 +1,7 @@
 import React from 'react';
 import GoogleMapReact from 'google-map-react';
 import Geocode from "react-geocode";
-import { Icon } from '@iconify/react';
+
 
 
 
