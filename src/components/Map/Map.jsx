@@ -20,18 +20,18 @@ const LocationPin = ({ text }) => {
 // const ApiKey = process.env.GoogleAPI;
 
 
-// set Google Maps Geocoding API 
-// Geocode.setApiKey(ApiKey); //  ⟽ Chuong's API key
-Geocode.setApiKey('AIzaSyDwG4Tj1ziODB2N2--aZhhjn7IyIpNR0-k'); //  ⟽ Chuong's API key
+// // set Google Maps Geocoding API 
+// // Geocode.setApiKey(ApiKey); //  ⟽ Chuong's API key
+// Geocode.setApiKey('AIzaSyDwG4Tj1ziODB2N2--aZhhjn7IyIpNR0-k'); //  ⟽ Chuong's API key
 
-// set response language. Defaults to english.
-Geocode.setLanguage("en");
+// // set response language. Defaults to english.
+// Geocode.setLanguage("en");
 
-// set response region. A Geocoding request with region=ca (Canada) 
-Geocode.setRegion("ca");
+// // set response region. A Geocoding request with region=ca (Canada) 
+// Geocode.setRegion("ca");
 
-// Enable or disable logs. Its optional.
-Geocode.enableDebug();
+// // Enable or disable logs. Its optional.
+// Geocode.enableDebug();
 
 // // Get address from latitude & longitude.
 // Geocode.fromLatLng("48.8583701", "2.2922926").then(
@@ -45,17 +45,19 @@ Geocode.enableDebug();
 // );
 
 // Get latitude & longitude from address.
-Geocode.fromAddress("Eiffel Tower").then(
-  response => {
-    const { lat, lng } = response.results[0].geometry.location;
-    console.log(lat, lng);
-  },
-  error => {
-    console.error(error);
-  }
-);
+// Geocode.fromAddress("Calgary").then(
+
+//   response => {
+//     const { lat, lng } = response.results[0].geometry.location;
+//     console.log(lat, lng);
+//   },
+//   error => {
+//     console.error(error);
+//   }
+// );
 
 const Map = ({ location, zoomLevel }) => {
+
   return (
     <>
       <div className="map">

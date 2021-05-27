@@ -21,7 +21,7 @@ function App() {
         <IntroSection />
         <PlaceAutoComp />
       </div>
-      <Map location={location} zoomLevel={15} /> {/* include it here */}
+      <Map location={location} zoomLevel={17} />
     </div>
   )
 }
