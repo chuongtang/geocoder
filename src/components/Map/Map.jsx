@@ -17,22 +17,29 @@ const PlacesAutoComp = () => {
     lat: null,
     lng: null
   });
+  const [markerLoc, setMarkerLoc] = useState({});
 
   const handleSelect = async value => {
     const results = await geocodeByAddress(value);
     const latLng = await getLatLng(results[0]);
     setAddress(value);
     setCoordinates(latLng);
+    setMarkerLoc(results);
 
   };
   const [category, setCategory] = useState("");
-  // const [comment, setComment] = useState('');
+  // render markers selection
 
-  const submitHandler = () => {
+  const setMarker = (markerLoc) => {
+    return (
+
+      <div className="pin">
+        ⤋
+        <p className="pin-text">{markerLoc.text}</p>
+      </div>
+    )
 
   }
-
-
 
   return (
     <div className="places">
@@ -48,7 +55,6 @@ const PlacesAutoComp = () => {
             <p>Longitude: {coordinates.lng}</p>
               Address
             <input {...getInputProps({ placeholder: "Type address" })} className='inputForm' />
-            {/* <p style={{ color: 'transparent' }}> spacer </p> */}
             <div>
               {loading ? <div>...loading</div> : null}
 
@@ -64,7 +70,7 @@ const PlacesAutoComp = () => {
                 );
               })}
             </div>
-            <Form onSubmit={submitHandler}>
+            <Form onSubmit={setMarker}>
               <Form.Group controlId='category'>
                 <Form.Label>Category</Form.Label>
                 <Form.Control
@@ -75,25 +81,21 @@ const PlacesAutoComp = () => {
                 >
                   <option value=''>Select...</option>
                   <option value='plastics'>Plastics 🧩</option>
-
                   <option value='paper'>Paper 📰</option>
                   <option value='clothes'>Clothes 👚</option>
                   <option value='electronics'>electronics 📺 </option>
                   <option value='furniture'>furniture 🛏️</option>
-
                   <option value='metal'>metal 🍴</option>
                   <option value='recyclables'>recyclables 🧃</option>
                   <option value='glass'>glass 🍸</option>
                   <option value='textiles'>textiles 🎏</option>
                   <option value='others'>others 🥡</option>
-
-
                 </Form.Control>
               </Form.Group>
 
               <Button type='submit' className='btn'>
                 Set Marker
-                      </Button>
+              </Button>
             </Form>
           </div>
         )}
@@ -105,18 +107,20 @@ const PlacesAutoComp = () => {
 }
 // End of PlaceAutoComp
 
+const markersArray = [{ address: "Calgary International Airport", lat: 51.13258, lng: -114.004907 },]
+
 const LocationPin = ({ text }) => {
   return (
 
     <div className="pin">
-      ⤋
+      🍍
       <p className="pin-text">{text}</p>
     </div>
   )
 };
 
 const Map = ({ location, zoomLevel }) => {
-  console.log(location.lat);
+  console.log(location);
   return (
     <>
       <div className="map">

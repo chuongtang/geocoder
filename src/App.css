@@ -44,20 +44,19 @@ code {
   margin: 2rem;
   border-radius: 5px;
   background: linear-gradient(225deg, #ffffff, #dddddd);
-  box-shadow:  -9px 9px 18px #a4a4a4,
+  box-shadow:  -9px 9px 18px #254d3a,
                9px -9px 18px #ffffff;
 }
 .coord{
   margin-right: 3rem;
 }
 .inputForm{
-  max-width: 100%;
   line-height: 3vh;
-  font-size: 1.5rem;
-  padding-left: 10rem;
-  padding-right: 15%;
-  /* margin-left: 2rem; */
+  font-size: 1.5rem; 
+  padding-right: 5%;
   margin-bottom: 2rem;
+  margin-left: 8rem;
+  text-align: left;
 }
 .btn{
   color: #00093a;

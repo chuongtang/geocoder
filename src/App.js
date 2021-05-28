@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Map location={Calgary} zoomLevel={16} />
+      <Map location={Calgary} zoomLevel={11} />
     </div>
   )
 }
